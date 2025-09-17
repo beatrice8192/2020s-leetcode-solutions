@@ -6,16 +6,17 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
+    # def isSymmetric(self, root: Optional[TreeNode]) -> bool:
     def isSymmetric(self, root):
         """
         :type root: Optional[TreeNode]
         :rtype: bool
         """
-        if root == None or (root.left == None and root.right == None):
+        if (root == None or (root.left == None and root.right == None)):
             return True
-        elif root.left != None and root.right != None and root.left.val == root.right.val and \
+        elif (root.left != None and root.right != None and root.left.val == root.right.val and \
             self.isSymmetric(TreeNode(0, root.left.left, root.right.right)) and \
-            self.isSymmetric(TreeNode(0, root.left.right, root.right.left)):
+            self.isSymmetric(TreeNode(0, root.left.right, root.right.left))):
             return True
         else:
             return False

@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/roman-to-integer
 class Solution(object):
+    # def romanToInt(self, s: str) -> int:
     def romanToInt(self, s):
         """
         :type s: str
@@ -10,28 +11,30 @@ class Solution(object):
         unit_max = 0
         for i in reversed(range(len(s))):
             unit = self.charToUnit(s[i])
-            if unit < 0: return -1
-            if unit < unit_max:
+            if (unit < 0):
+                return -1
+            if (unit < unit_max):
                 result -= unit
             else:
                 unit_max = unit
                 result += unit
         return result
 
+    # def charToUnit(self, char: str) -> int:
     def charToUnit(self, char):
-        if char == 'I':
+        if (char == 'I'):
             return 1
-        elif char == 'V':
+        elif (char == 'V'):
             return 5
-        elif char == 'X':
+        elif (char == 'X'):
             return 10
-        elif char == 'L':
+        elif (char == 'L'):
             return 50
-        elif char == 'C':
+        elif (char == 'C'):
             return 100
-        elif char == 'D':
+        elif (char == 'D'):
             return 500
-        elif char == 'M':
+        elif (char == 'M'):
             return 1000
         else:
             return -1

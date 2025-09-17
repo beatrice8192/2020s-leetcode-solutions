@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/climbing-stairs
 class Solution(object):
+    # def climbStairs(self, n: int) -> int:
     def climbStairs(self, n):
         """
         :type n: int
@@ -25,12 +26,12 @@ class Solution(object):
         twos = 0
         total = 1
         combination = 1
-        while ones >= 2:
+        while (ones >= 2):
             ones -= 2
             twos += 1
             combination *= (ones + 1) * (ones + 2)
             combination /= (ones + twos + 1) * (twos)
             # print ones, twos, combination
             total += combination
-        return total
+        return int(total)
 

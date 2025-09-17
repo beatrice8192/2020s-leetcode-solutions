@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/valid-parentheses
 class Solution(object):
+    # def isValid(self, s: str) -> bool:
     def isValid(self, s):
         """
         :type s: str
@@ -10,10 +11,10 @@ class Solution(object):
         matches = {')':'(', ']':'[', '}':'{'}
         stack = []
         for char in s:
-            if char in opening:
+            if (char in opening):
                 stack.append(char)
-            elif char in closing:
-                if len(stack) > 0 and stack[-1] == matches[char]:
+            elif (char in closing):
+                if (len(stack) > 0 and stack[-1] == matches[char]):
                     stack.pop()
                 else:
                     return False

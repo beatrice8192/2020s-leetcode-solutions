@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/plus-one
 class Solution(object):
+    # def plusOne(self, digits: List[int]) -> List[int]:
     def plusOne(self, digits):
         """
         :type digits: List[int]
@@ -8,9 +9,9 @@ class Solution(object):
         carry = 1
         for i in reversed(range(len(digits))):
             value = digits[i] + carry
-            carry = value / 10
             digits[i] = value % 10
-        if carry == 1:
+            carry = int(value / 10)
+        if (carry == 1):
             digits.insert(0, 1)
         return digits
 

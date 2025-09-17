@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/remove-duplicates-from-sorted-array
 class Solution(object):
+    # def removeDuplicates(self, nums: List[int]) -> int:
     def removeDuplicates(self, nums):
         """
         :type nums: List[int]
@@ -7,7 +8,7 @@ class Solution(object):
         """
         i = 0
         for item in nums:
-            if nums[i] != item:
+            if (nums[i] != item):
                 i += 1
                 nums[i] = item
         return i + 1

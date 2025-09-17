@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/two-sum
 class Solution(object):
+    # def twoSum(self, nums: List[int], target: int) -> List[int]:
     def twoSum(self, nums, target):
         """
         :type nums: List[int]
@@ -11,10 +12,10 @@ class Solution(object):
         start = 0
         end = len(nums)-1
         # O(n)
-        while start < end:
-            if nums_sorted[start][0] + nums_sorted[end][0] < target:
+        while (start < end):
+            if (nums_sorted[start][0] + nums_sorted[end][0] < target):
                 start += 1
-            elif nums_sorted[start][0] + nums_sorted[end][0] > target:
+            elif (nums_sorted[start][0] + nums_sorted[end][0] > target):
                 end -= 1
             else:
                 return [nums_sorted[start][1], nums_sorted[end][1]]

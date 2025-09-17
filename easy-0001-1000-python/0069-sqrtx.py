@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/sqrtx
 class Solution(object):
+    # def mySqrt(self, x: int) -> int:
     def mySqrt(self, x):
         """
         :type x: int
@@ -7,6 +8,6 @@ class Solution(object):
         """
         result = x
         while not (result * result <= x and (result + 1) * (result + 1) >= x):
-            result = (result + x / result) / 2
+            result = int((result + x / result) / 2)
         return result
 

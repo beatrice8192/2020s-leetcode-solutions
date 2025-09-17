@@ -1,5 +1,6 @@
 # https://leetcode.com/problems/remove-element
 class Solution(object):
+    # def removeElement(self, nums: List[int], val: int) -> int:
     def removeElement(self, nums, val):
         """
         :type nums: List[int]
@@ -8,7 +9,7 @@ class Solution(object):
         """
         i = 0
         for item in nums:
-            if item != val:
+            if (item != val):
                 nums[i] = item
                 i += 1
         return i
