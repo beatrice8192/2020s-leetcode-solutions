@@ -1,5 +1,5 @@
 -- https://leetcode.com/problems/combine-two-tables
--- Write your PostgreSQL query statement below
+-- compatible with MySQL, MS SQL, PostgreSQL.
 select firstName, lastName, city, state
 from Person
 left join Address on Person.personId = Address.personId;

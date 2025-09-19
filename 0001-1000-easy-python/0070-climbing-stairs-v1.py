@@ -1,27 +1,28 @@
 # https://leetcode.com/problems/climbing-stairs
 class Solution(object):
+    # 45 of 1 + 0 of 2 = combination(45,0)
+
+    # 43 of 1 + 1 of 2 = combination(44,1)
+    # (44)/(1) = previous/45*45*44/1
+
+    # 41 of 1 + 2 of 2 = combination(43,2)
+    # (43*42)/(2*1) = previous/44*43*42/2
+
+    # 39 of 1 + 3 of 3 = combination(42,3)
+    # (42*41*40)/(3*2*1) = previous/43*41*40/3
+
+    # 3 of 1 + 21 of 2 = combination(24,21)
+    # (24*..*4)/(21*..*1) = previous/25*5*4/21
+
+    # 1 of 1 + 22 of 2 = combination(23,22)
+    # (23*..*2)/(22*..*1) = previous/24*3*2/22
+
     # def climbStairs(self, n: int) -> int:
     def climbStairs(self, n):
         """
         :type n: int
         :rtype: int
         """
-        # 1*45 + 2*0 = c(45,0)
-
-        # 1*43 + 2*1 = c(44,1)
-        # (44)/(1) = previous/45*45*44/1
-
-        # 1*41 + 2*2 = c(43,2)
-        # (43*42)/(2*1) = previous/44*43*42/2
-
-        # 1*39 + 2*3 = c(42,3)
-        # (42*41*40)/(3*2*1) = previous/43*41*40/3
-
-        # 1*3 + 2*21 = c(24,21)
-        # previous/25*5*4/21
-
-        # 1*1 + 2*22 = c(23,22)
-        # previous/24*3*2/22
         ones = n
         twos = 0
         total = 1

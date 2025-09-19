@@ -5,7 +5,7 @@
 #         self.val = x
 #         self.next = None
 class Solution(object):
-    # floyd's
+    # Floyd's Cycle-Finding Algorithm
     def hasCycle(self, head):
         """
         :type head: ListNode

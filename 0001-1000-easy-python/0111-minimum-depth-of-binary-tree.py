@@ -6,13 +6,13 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
+    # bfs
     # def minDepth(self, root: Optional[TreeNode]) -> int:
     def minDepth(self, root):
         """
         :type root: TreeNode
         :rtype: int
         """
-        # bfs
         if (root == None):
             return 0
         queue = [root]

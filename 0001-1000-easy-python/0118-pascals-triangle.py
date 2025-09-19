@@ -1,4 +1,6 @@
 # https://leetcode.com/problems/pascals-triangle
+# referencing the solution of:
+# https://leetcode.com/problems/pascals-triangle-ii
 class Solution(object):
     # def generate(self, numRows: int) -> List[List[int]]:
     def generate(self, numRows):

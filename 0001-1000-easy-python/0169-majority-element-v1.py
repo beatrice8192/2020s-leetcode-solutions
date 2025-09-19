@@ -6,11 +6,11 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        hash = {}
+        map = {}
         for n in nums:
-            if (n not in hash):
-                hash[n] = 0
-            hash[n] += 1
-            if (hash[n] > len(nums) / 2):
+            if (n not in map):
+                map[n] = 0
+            map[n] += 1
+            if (map[n] > len(nums) / 2):
                 return n
 

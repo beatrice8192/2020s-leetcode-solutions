@@ -6,6 +6,7 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
+    # bfs
     # def hasPathSum(self, root: Optional[TreeNode], targetSum: int) -> bool:
     def hasPathSum(self, root, targetSum):
         """
@@ -13,7 +14,6 @@ class Solution(object):
         :type targetSum: int
         :rtype: bool
         """
-        # bfs
         if (root == None):
             return False
         queue = [root]
