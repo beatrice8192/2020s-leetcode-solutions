@@ -1,24 +1,13 @@
-# https://leetcode.com/problems/linked-list-cycle
-# referencing the solution of:
 # https://leetcode.com/problems/reverse-linked-list
-
 # Definition for singly-linked list.
 # class ListNode(object):
-#     def __init__(self, x):
-#         self.val = x
-#         self.next = None
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution(object):
-    # reverse linked list
-    # def hasCycle(self, head: Optional[ListNode]) -> bool:
-    def hasCycle(self, head):
-        """
-        :type head: ListNode
-        :rtype: bool
-        """
-        if (head == None or head.next == None):
-            return False
-        else:
-            return (head == self.reverseList(head))
+    # step 1: {last2} -> {last1} -> {next1} -> {next2}
+    # step 2: {last2} <- {last1}    {next1} -> {next2}
+    # step 3: {     } <- {last2}    {last1} -> {next1}
 
     # def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
     def reverseList(self, head):

@@ -6,6 +6,7 @@
 #         self.next = None
 class Solution(object):
     # Floyd's Cycle-Finding Algorithm
+    # def hasCycle(self, head: Optional[ListNode]) -> bool:
     def hasCycle(self, head):
         """
         :type head: ListNode

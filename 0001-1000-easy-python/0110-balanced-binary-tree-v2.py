@@ -14,6 +14,7 @@ class Solution(object):
         """
         return self.maxDepth(root) != -1
 
+    # use -1 to represent inbalanced tree
     # def maxDepth(self, root: Optional[TreeNode]) -> int:
     def maxDepth(self, root):
         if (root == None):
