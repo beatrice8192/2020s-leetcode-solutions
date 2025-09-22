@@ -24,12 +24,12 @@ class MyStack(object):
         """
         :rtype: int
         """
-        tmp = self.front
+        x = self.front
         if len(self.queue) == 0:
             self.front = None
         else:
             self.front = self.queue.pop()
-        return tmp
+        return x
 
     # O(1)
     def top(self):

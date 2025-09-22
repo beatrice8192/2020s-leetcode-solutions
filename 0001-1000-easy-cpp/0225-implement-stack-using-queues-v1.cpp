@@ -18,9 +18,9 @@ public:
 
     // O(1)
     int pop() {
-        int tmp = this->queue.front();
+        int x = this->queue.front();
         this->queue.pop();
-        return tmp;
+        return x;
     }
 
     // O(1)

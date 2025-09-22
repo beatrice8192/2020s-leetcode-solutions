@@ -21,9 +21,9 @@ public:
             this->queue.push(this->queue.front());
             this->queue.pop();
         }
-        int tmp = this->queue.front();
+        int x = this->queue.front();
         this->queue.pop();
-        return tmp;
+        return x;
     }
 
     // O(1)
