@@ -10,7 +10,7 @@ class Solution(object):
         # O(n log n)
         nums_sorted = sorted([(nums[i], i) for i in range(len(nums))])
         start = 0
-        end = len(nums)-1
+        end = len(nums) - 1
         # O(n)
         while (start < end):
             if (nums_sorted[start][0] + nums_sorted[end][0] < target):
