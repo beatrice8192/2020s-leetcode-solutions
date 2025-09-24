@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/majority-element
+# Moore's Voting Algorithm
 class Solution(object):
-    # Moore's Voting Algorithm
     # def majorityElement(self, nums: List[int]) -> int:
     def majorityElement(self, nums):
         """

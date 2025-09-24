@@ -7,8 +7,9 @@
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
+
+# reverse linked list
 class Solution(object):
-    # reverse linked list
     # def hasCycle(self, head: Optional[ListNode]) -> bool:
     def hasCycle(self, head):
         """

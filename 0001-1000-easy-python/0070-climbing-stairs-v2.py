@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/climbing-stairs
+# using Fibonacci
 class Solution(object):
-    # using Fibonacci
     # def climbStairs(self, n: int) -> int:
     def climbStairs(self, n):
         """

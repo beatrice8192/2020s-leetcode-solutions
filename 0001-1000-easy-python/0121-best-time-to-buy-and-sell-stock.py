@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/best-time-to-buy-and-sell-stock
+# Kadane's Algorithm
 class Solution(object):
-    # Kadane's Algorithm
     # def maxProfit(self, prices: List[int]) -> int:
     def maxProfit(self, prices):
         """
