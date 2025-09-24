@@ -1,6 +1,4 @@
 # https://leetcode.com/problems/valid-perfect-square
-# referencing the solution of:
-# https://leetcode.com/problems/sqrtx
 class Solution(object):
     # def isPerfectSquare(self, num: int) -> bool:
     def isPerfectSquare(self, num):
@@ -9,7 +7,9 @@ class Solution(object):
         :rtype: bool
         """
         return num == self.mySqrt(num) ** 2
-        
+
+    # referencing the solution of:
+    # https://leetcode.com/problems/sqrtx
     # def mySqrt(self, x: int) -> int:
     def mySqrt(self, x):
         """

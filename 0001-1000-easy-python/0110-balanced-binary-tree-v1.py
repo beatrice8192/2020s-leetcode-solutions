@@ -1,6 +1,4 @@
 # https://leetcode.com/problems/balanced-binary-tree
-# referencing the solution of:
-# https://leetcode.com/problems/maximum-depth-of-binary-tree
 
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -19,8 +17,10 @@ class Solution(object):
             return True
         else:
             return self.isBalanced(root.left) and self.isBalanced(root.right) and \
-                abs(self.maxDepth(root.left) - self.maxDepth(root.right)) < 2
+                (abs(self.maxDepth(root.left) - self.maxDepth(root.right)) < 2)
 
+    # referencing the solution of:
+    # https://leetcode.com/problems/maximum-depth-of-binary-tree
     # def maxDepth(self, root: Optional[TreeNode]) -> int:
     def maxDepth(self, root):
         """

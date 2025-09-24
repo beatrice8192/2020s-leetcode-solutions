@@ -12,5 +12,5 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: List[int]
         """
-        return [] if (root == None) else self.postorderTraversal(root.left) + self.postorderTraversal(root.right) + [root.val]
+        return [] if (root == None) else (self.postorderTraversal(root.left) + self.postorderTraversal(root.right) + [root.val])
 

@@ -1,16 +1,5 @@
-# https://leetcode.com/problems/valid-anagram
+# https://leetcode.com/problems/find-the-difference
 class Solution(object):
-    # def isAnagram(self, s: str, t: str) -> bool:
-    def isAnagram(self, s, t):
-        """
-        :type s: str
-        :type t: str
-        :rtype: bool
-        """
-        return (len(s) == len(t)) and (self.findTheDifference(s, t) == None)
-
-    # referencing the solution of:
-    # https://leetcode.com/problems/find-the-difference
     # def findTheDifference(self, s: str, t: str) -> str:
     def findTheDifference(self, s, t):
         """

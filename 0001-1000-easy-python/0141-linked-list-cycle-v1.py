@@ -1,6 +1,4 @@
 # https://leetcode.com/problems/linked-list-cycle
-# referencing the solution of:
-# https://leetcode.com/problems/reverse-linked-list
 
 # Definition for singly-linked list.
 # class ListNode(object):
@@ -16,11 +14,10 @@ class Solution(object):
         :type head: ListNode
         :rtype: bool
         """
-        if (head == None or head.next == None):
-            return False
-        else:
-            return (head == self.reverseList(head))
+        return (head != None) and (head.next != None) and (head == self.reverseList(head))
 
+    # referencing the solution of:
+    # https://leetcode.com/problems/reverse-linked-list
     # def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
     def reverseList(self, head):
         """

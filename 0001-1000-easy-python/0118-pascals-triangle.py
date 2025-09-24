@@ -1,6 +1,4 @@
 # https://leetcode.com/problems/pascals-triangle
-# referencing the solution of:
-# https://leetcode.com/problems/pascals-triangle-ii
 class Solution(object):
     # def generate(self, numRows: int) -> List[List[int]]:
     def generate(self, numRows):
@@ -10,6 +8,8 @@ class Solution(object):
         """
         return [self.getRow(row) for row in range(numRows)]
 
+    # referencing the solution of:
+    # https://leetcode.com/problems/pascals-triangle-ii
     # def getRow(self, rowIndex: int) -> List[int]:
     def getRow(self, rowIndex):
         """

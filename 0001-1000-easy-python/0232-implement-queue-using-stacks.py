@@ -47,7 +47,7 @@ class MyQueue(object):
         """
         :rtype: bool
         """
-        return len(self.stackTopDown) == 0 and len(self.stackBottomUp) == 0
+        return (len(self.stackTopDown) == 0) and (len(self.stackBottomUp) == 0)
 
 # Your MyQueue object will be instantiated and called as such:
 # obj = MyQueue()

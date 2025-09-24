@@ -1,13 +1,13 @@
-# https://leetcode.com/problems/valid-anagram
+# https://leetcode.com/problems/ransom-note
 class Solution(object):
-    # def isAnagram(self, s: str, t: str) -> bool:
-    def isAnagram(self, s, t):
+    # def canConstruct(self, ransomNote: str, magazine: str) -> bool:
+    def canConstruct(self, ransomNote, magazine):
         """
-        :type s: str
-        :type t: str
+        :type ransomNote: str
+        :type magazine: str
         :rtype: bool
         """
-        return (len(s) == len(t)) and (self.findTheDifference(s, t) == None)
+        return self.findTheDifference(magazine, ransomNote) == None
 
     # referencing the solution of:
     # https://leetcode.com/problems/find-the-difference

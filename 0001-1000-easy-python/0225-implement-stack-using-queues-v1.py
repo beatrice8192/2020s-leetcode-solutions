@@ -43,7 +43,7 @@ class MyStack(object):
         """
         :rtype: bool
         """
-        return len(self.queue) == 0 and self.front == None
+        return (len(self.queue) == 0) and (self.front == None)
 
 # Your MyStack object will be instantiated and called as such:
 # obj = MyStack()

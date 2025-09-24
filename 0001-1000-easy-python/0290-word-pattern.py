@@ -1,6 +1,4 @@
 # https://leetcode.com/problems/word-pattern
-# referencing the solution of:
-# https://leetcode.com/problems/isomorphic-strings
 class Solution(object):
     # def wordPattern(self, pattern: str, s: str) -> bool:
     def wordPattern(self, pattern, s):
@@ -10,11 +8,10 @@ class Solution(object):
         :rtype: bool
         """
         words = s.split(" ")
-        if len(pattern) != len(words):
-            return False
-        else:
-            return self.isIsomorphic(pattern, words)
+        return (len(pattern) == len(words)) and self.isIsomorphic(pattern, words)
 
+    # referencing the solution of:
+    # https://leetcode.com/problems/isomorphic-strings
     # def isIsomorphic(self, s: str, t: str) -> bool:
     def isIsomorphic(self, s, t):
         """

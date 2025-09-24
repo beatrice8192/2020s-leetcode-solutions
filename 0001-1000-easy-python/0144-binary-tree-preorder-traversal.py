@@ -13,5 +13,5 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
-        return [] if (root == None) else [root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right)
+        return [] if (root == None) else ([root.val] + self.preorderTraversal(root.left) + self.preorderTraversal(root.right))
 

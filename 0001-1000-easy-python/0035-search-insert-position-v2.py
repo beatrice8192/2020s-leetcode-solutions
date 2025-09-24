@@ -13,7 +13,7 @@ class Solution(object):
             if (target <= nums[start]):
                 return start
             elif (start + 1 >= end):
-                return end 
+                return end
             mid = int((start + end) / 2)
             if (target < nums[mid]):
                 end = mid
