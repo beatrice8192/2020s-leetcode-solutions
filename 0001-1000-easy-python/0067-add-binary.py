@@ -11,13 +11,12 @@ class Solution(object):
         carry = 0
         i = 1
         while (i <= len(a) or i <= len(b)):
-            value = carry
             if (i <= len(a) and a[-i] == "1"):
-                value += 1
+                carry += 1
             if (i <= len(b) and b[-i] == "1"):
-                value += 1
-            result = str(value % 2) + result
-            carry = int(value / 2)
+                carry += 1
+            result = str(carry % 2) + result
+            carry = int(carry / 2)
             i += 1
         if (carry == 1):
             result = "1" + result

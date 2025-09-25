@@ -8,9 +8,9 @@ class Solution(object):
         """
         carry = 1
         for i in reversed(range(len(digits))):
-            value = digits[i] + carry
-            digits[i] = value % 10
-            carry = int(value / 10)
+            carry += digits[i]
+            digits[i] = carry % 10
+            carry = int(carry / 10)
         if (carry == 1):
             digits.insert(0, 1)
         return digits

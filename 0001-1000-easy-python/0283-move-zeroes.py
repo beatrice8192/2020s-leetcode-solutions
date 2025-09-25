@@ -1,4 +1,6 @@
 # https://leetcode.com/problems/move-zeroes
+
+# two pointers
 class Solution(object):
     # def moveZeroes(self, nums: List[int]) -> None:
     def moveZeroes(self, nums):
