@@ -1,7 +1,7 @@
 # https://leetcode.com/problems/happy-number
 
 # https://en.wikipedia.org/wiki/Happy_number#10-happy_numbers
-# cheating with 4:
+# When base = 10, there's exactly one cycle that prevents the numbers from being reduced into 1:
 # 2^2 = 4
 # 4^2 = 16
 # 1^2 + 6^2 = 1 + 36 = 37
