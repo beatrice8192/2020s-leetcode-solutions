@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/climbing-stairs
 
-# observe the ppatern:
+# observe the pattern:
 # 45 of 1 + 0 of 2 = combination(45,0)
 
 # 43 of 1 + 1 of 2 = combination(44,1)
