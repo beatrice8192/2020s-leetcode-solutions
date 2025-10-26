@@ -1,5 +1,6 @@
 # https://github.com/noworneverev/leetcode-api
 # curl https://leetcode-api-pied.vercel.app/problem/1
+# grep python script/0001-1000-python.log | sed 's|python|cpp|g' | xargs -I % sh -c "a=%; dir=\$(dirname \$a); file=\$(basename \$a | cut -c 6-); echo \$dir/\$file; mkdir -p \$dir; echo \"// https://leetcode.com/problems/\$file\" > \$a.cpp; git add \$a.cpp"
 
 start=$1
 end=$2
