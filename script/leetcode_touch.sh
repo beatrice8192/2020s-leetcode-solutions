@@ -8,7 +8,8 @@ ext_default=py
 [ -z ${start} ] && exit
 [ -z ${end} ] && exit
 [ ${start} -gt ${end} ] && exit
-dir_default=$(printf "%04d-%04d" $(( ${start} / 1000 * 1000 + 1 )) $(( ${end} / 1000 * 1000 )))
+start_mille=$(( ${start} / 1000 * 1000 ))
+dir_default=$(printf "%04d-%04d" $(( ${start_mille} + 1 )) $(( ${start_mille} + 1000 )))
 
 for i in {${start}..${end}}; do
     difficulty=""
