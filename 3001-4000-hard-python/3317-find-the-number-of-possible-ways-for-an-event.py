@@ -1,0 +1,1 @@
+# https://leetcode.com/problems/find-the-number-of-possible-ways-for-an-event
