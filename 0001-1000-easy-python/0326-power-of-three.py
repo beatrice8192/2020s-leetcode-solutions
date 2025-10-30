@@ -6,7 +6,5 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        return True if (n == 1) else \
-            (False if (n <= 0 or n % 3 != 0) else \
-            self.isPowerOfThree(int(n / 3)))
+        return (n == 1) or (n > 1 and n % 3 == 0 and self.isPowerOfThree(int(n / 3)))
 

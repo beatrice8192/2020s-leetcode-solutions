@@ -6,7 +6,5 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        return True if (n == 1) else \
-            (False if (n <= 0 or n & 3 != 0) else \
-            self.isPowerOfFour(n >> 2))
+        return (n == 1) or (n > 1 and n % 4 == 0 and self.isPowerOfFour(int(n / 4)))
 
