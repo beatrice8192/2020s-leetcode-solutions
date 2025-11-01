@@ -7,7 +7,6 @@ class Node(object):
         self.val = val
         self.children = children
 """
-
 class Solution(object):
     # def preorder(self, root: 'Node') -> List[int]:
     def preorder(self, root):

@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/binary-tree-level-order-traversal-ii
+# https://leetcode.com/problems/binary-tree-level-order-traversal
 
 # Definition for a binary tree node.
 # class TreeNode(object):
@@ -7,10 +7,8 @@
 #         self.left = left
 #         self.right = right
 class Solution(object):
-    # referencing the solution of:
-    # https://leetcode.com/problems/binary-tree-level-order-traversal
-    # def levelOrderBottom(self, root: Optional[TreeNode]) -> List[List[int]]:
-    def levelOrderBottom(self, root):
+    # def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:
+    def levelOrder(self, root):
         """
         :type root: Optional[TreeNode]
         :rtype: List[List[int]]
@@ -31,5 +29,5 @@ class Solution(object):
                     bfs_queue.append(bfs_queue[i].right)
             bfs_start = bfs_end
             bfs_end = len(bfs_queue)
-        return list(reversed(result))
+        return result
 

@@ -6,8 +6,6 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
-
-# bfs
 class Solution(object):
     # def minDepth(self, root: Optional[TreeNode]) -> int:
     def minDepth(self, root):
@@ -17,20 +15,20 @@ class Solution(object):
         """
         if (root == None):
             return 0
-        queue = [root]
-        depth = 1
-        start = 0
-        end = len(queue)
-        while (start < end):
-            for i in range(start, end):
-                if (queue[i].left == None and queue[i].right == None):
-                    return depth
-                if (queue[i].left != None):
-                    queue.append(queue[i].left)
-                if (queue[i].right != None):
-                    queue.append(queue[i].right)
-            start = end
-            end = len(queue)
-            depth += 1
-        return depth
+        bfs_queue = [root]
+        bfs_start = 0
+        bfs_end = len(bfs_queue)
+        level = 1
+        while (bfs_start < bfs_end):
+            for i in range(bfs_start, bfs_end):
+                if (bfs_queue[i].left == None and bfs_queue[i].right == None):
+                    return level
+                if (bfs_queue[i].left != None):
+                    bfs_queue.append(bfs_queue[i].left)
+                if (bfs_queue[i].right != None):
+                    bfs_queue.append(bfs_queue[i].right)
+            bfs_start = bfs_end
+            bfs_end = len(bfs_queue)
+            level += 1
+        return level
 

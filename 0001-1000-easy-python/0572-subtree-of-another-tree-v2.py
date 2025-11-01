@@ -25,7 +25,7 @@ class Solution(object):
     # https://leetcode.com/problems/binary-tree-preorder-traversal
     # def preorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
     def preorderTraversal(self, root):
-        """ 
+        """
         :type root: TreeNode
         :rtype: List[int]
         """

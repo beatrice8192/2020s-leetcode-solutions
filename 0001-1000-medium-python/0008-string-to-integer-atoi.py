@@ -12,8 +12,8 @@ class Solution(object):
             if (positive):
                 return min(result, 2 ** 31 - 1)
             else:
-                return -min(result, 2 ** 31) 
-        result = 0 
+                return -min(result, 2 ** 31)
+        result = 0
         positive = True
         terminate = False
         for i in range(len(s)):

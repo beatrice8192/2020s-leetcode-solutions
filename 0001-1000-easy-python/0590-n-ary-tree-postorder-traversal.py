@@ -7,7 +7,6 @@ class Node(object):
         self.val = val
         self.children = children
 """
-
 class Solution(object):
     # def postorder(self, root: 'Node') -> List[int]:
     def postorder(self, root):
