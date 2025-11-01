@@ -6,10 +6,10 @@ class Solution(object):
         :type target: List[int]
         :rtype: int
         """
-        result = prev = 0
+        result = last = 0
         for n in target:
-            if (n > prev):
-                result += n - prev
-            prev = n
+            if (n > last):
+                result += n - last
+            last = n
         return result
 
