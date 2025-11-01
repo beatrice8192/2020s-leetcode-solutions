@@ -17,15 +17,15 @@ class Solution(object):
             return []
         result = []
         get_children = lambda node: ([node.left] if node.left else []) + ([node.right] if node.right else [])
-        bfs = TreeBFS(root, get_children)
+        bfs = BFS(root, get_children)
         while bfs.hasNext():
-            top = bfs.getNext()
+            node = bfs.getNext()
             if (len(result) <= bfs.level):
                 result.append([])
-            result[bfs.level].append(top.val)
+            result[bfs.level].append(node.val)
         return result
 
-class TreeBFS:
+class BFS:
     def __init__(self, root, get_children):
         self.get_children = get_children
         self.bfs_queue = [root]
@@ -38,13 +38,12 @@ class TreeBFS:
         if (self.index == self.bfs_end):
             self.bfs_start = self.bfs_end
             self.bfs_end = len(self.bfs_queue)
-            self.index = self.bfs_start
             self.level += 1
         return self.bfs_start < self.bfs_end
 
     def getNext(self):
-        top = self.bfs_queue[self.index]
-        self.bfs_queue.extend(self.get_children(top))
+        node = self.bfs_queue[self.index]
+        self.bfs_queue.extend(self.get_children(node))
         self.index += 1
-        return top
+        return node
 
