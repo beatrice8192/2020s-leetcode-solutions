@@ -1,18 +1,19 @@
-# https://leetcode.com/problems/max-area-of-island
+# https://leetcode.com/problems/count-sub-islands
 class Solution(object):
-    # def maxAreaOfIsland(self, grid: List[List[int]]) -> int:
-    def maxAreaOfIsland(self, grid):
+    # def countSubIslands(self, grid1: List[List[int]], grid2: List[List[int]]) -> int:
+    def countSubIslands(self, grid1, grid2):
         """
-        :type grid: List[List[int]]
+        :type grid1: List[List[int]]
+        :type grid2: List[List[int]]
         :rtype: int
         """
-        result = 0
-        rows = len(grid)
-        columns = len(grid[0])
+        count = 0
+        rows = len(grid2)
+        columns = len(grid2[0])
         def visited(r, c):
-            return grid[r][c] != 1
+            return grid2[r][c] != 1
         def set_visited(r, c):
-            grid[r][c] = 2
+            grid2[r][c] = 2
         def get_children(node):
             r = node[0]
             c = node[1]
@@ -36,8 +37,10 @@ class Solution(object):
                 bfs = BFS((r, c), get_children)
                 while bfs.hasNext():
                     node = bfs.getNext()
-                result = max(result, len(set(bfs.bfs_queue)))
-        return result
+                include = len([node for node in set(bfs.bfs_queue) if grid1[node[0]][node[1]] == 1]) == len(set(bfs.bfs_queue))
+                if (include):
+                    count += 1
+        return count
 
 class BFS:
     def __init__(self, root, get_children):

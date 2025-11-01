@@ -1,21 +1,18 @@
-# https://leetcode.com/problems/number-of-closed-islands
+# https://leetcode.com/problems/count-sub-islands
 class Solution(object):
-    # def closedIsland(self, grid: List[List[int]]) -> int:
-    def closedIsland(self, grid):
+    # def countSubIslands(self, grid1: List[List[int]], grid2: List[List[int]]) -> int:
+    def countSubIslands(self, grid1, grid2):
         """
-        :type grid: List[List[int]]
+        :type grid1: List[List[int]]
+        :type grid2: List[List[int]]
         :rtype: int
         """
         count = 0
-        rows = len(grid)
-        columns = len(grid[0])
-        def visited(r, c):
-            return grid[r][c] != 0
-        def set_visited(r, c):
-            grid[r][c] = 2
+        rows = len(grid2)
+        columns = len(grid2[0])
         for i in range(rows):
             for j in range(columns):
-                if visited(i, j):
+                if (grid2[i][j] != 1):
                     continue
                 out_of_bound = False
                 bfs_queue = [(i, j)]
@@ -25,18 +22,18 @@ class Solution(object):
                     for k in range(bfs_start, bfs_end):
                         r = bfs_queue[k][0]
                         c = bfs_queue[k][1]
-                        if visited(r, c):
+                        if (grid2[r][c] != 1):
                             continue
-                        set_visited(r, c)
-                        if (r-1 < 0 or r+1 >= rows or c-1 < 0 or c+1 >= columns):
+                        elif (grid1[r][c] != 1):
                             out_of_bound = True
-                        if (r-1 >= 0 and not visited(r-1, c)):
+                        grid2[r][c] = 2
+                        if (r-1 >= 0 and grid2[r-1][c] == 1):
                             bfs_queue.append((r-1, c))
-                        if (r+1 < rows and not visited(r+1, c)):
+                        if (r+1 < rows and grid2[r+1][c] == 1):
                             bfs_queue.append((r+1, c))
-                        if (c-1 >= 0 and not visited(r, c-1)):
+                        if (c-1 >= 0 and grid2[r][c-1] == 1):
                             bfs_queue.append((r, c-1))
-                        if (c+1 < columns and not visited(r, c+1)):
+                        if (c+1 < columns and grid2[r][c+1] == 1):
                             bfs_queue.append((r, c+1))
                     bfs_start = bfs_end
                     bfs_end = len(bfs_queue)
