@@ -16,14 +16,14 @@ class Solution(object):
         if (root == None):
             return []
         result = []
-        def helper(root, level):
+        def dfs(root, level):
             if (len(result) < level + 1):
                 result.append([])
             result[level].append(root.val)
             if (root.left):
-                helper(root.left, level + 1)
+                dfs(root.left, level + 1)
             if (root.right):
-                helper(root.right, level + 1)
-        helper(root, 0)
+                dfs(root.right, level + 1)
+        dfs(root, 0)
         return result
 

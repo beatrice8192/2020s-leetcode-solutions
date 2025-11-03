@@ -13,12 +13,12 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: int
         """
-        def helper(root):
+        def dfs(root):
             if (root == None):
                 return (0, 0) # sum, sum of tilt
             else:
-                left = helper(root.left)
-                right = helper(root.right)
+                left = dfs(root.left)
+                right = dfs(root.right)
                 return (root.val + left[0] + right[0], abs(left[0] - right[0]) + left[1] + right[1])
-        return helper(root)[1]
+        return dfs(root)[1]
 

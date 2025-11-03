@@ -14,14 +14,14 @@ class Solution:
         :rtype: List[float]
         """
         levels = []
-        def helper(root, level):
+        def dfs(root, level):
             if (root == None):
                 return
             if (len(levels) < level + 1):
                 levels.append((0, 0)) # sum, count
             levels[level] = (levels[level][0] + root.val, levels[level][1] + 1)
-            helper(root.left, level + 1)
-            helper(root.right, level + 1)
-        helper(root, 0)
+            dfs(root.left, level + 1)
+            dfs(root.right, level + 1)
+        dfs(root, 0)
         return [float(x[0]) / float(x[1]) for x in levels]
 
