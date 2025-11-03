@@ -6,8 +6,8 @@ class NumArray(object):
         :type nums: List[int]
         """
         self.sums = [nums[0]] * len(nums)
-        for i in range(1, len(nums)):
-            self.sums[i] = self.sums[i-1] + nums[i]
+        for i in range(len(nums) - 1):
+            self.sums[i+1] = self.sums[i] + nums[i+1]
 
     def sumRange(self, left, right):
         """

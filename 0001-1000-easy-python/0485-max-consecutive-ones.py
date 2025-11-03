@@ -6,8 +6,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        max_one = 0
         curr_one = 0
+        max_one = 0
         for n in nums:
             if (n == 1):
                 curr_one += 1
