@@ -14,18 +14,18 @@ class Solution(object):
         :type root: Optional[TreeNode]
         :rtype: int
         """
-        heap = []
+        min_heap = []
         def dfs(node):
             if (node == None):
                 return
             else:
-                heapq.heappush(heap, node.val)
+                heapq.heappush(min_heap, node.val)
                 dfs(node.left)
                 dfs(node.right)
         dfs(root)
-        first = heapq.heappop(heap)
+        first = heapq.heappop(min_heap)
         result = first
-        while (len(heap) > 0 and result == first):
-            result = heapq.heappop(heap)
+        while (len(min_heap) > 0 and result == first):
+            result = heapq.heappop(min_heap)
         return result if result != first else -1
 
