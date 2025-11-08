@@ -20,9 +20,9 @@ class Solution(object):
             increment(nums[i])
         for i in range(len(nums) - (k - 1)):
             increment(nums[i + (k - 1)])
-            frequency = list(reversed(sorted([(occurrences[n], n) for n in occurrences])))
-            for j in range(min(x, len(frequency))):
-                answer[i] += frequency[j][0] * frequency[j][1]
+            frequencies = list(reversed(sorted([(occurrences[n], n) for n in occurrences])))
+            for j in range(min(x, len(frequencies))):
+                answer[i] += frequencies[j][0] * frequencies[j][1]
             decrement(nums[i])
         return answer
 
