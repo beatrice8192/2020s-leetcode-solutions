@@ -9,11 +9,7 @@ class MyQueue(object):
         self.front = None
 
     # O(n)
-    def push(self, x):
-        """
-        :type x: int
-        :rtype: None
-        """
+    def push(self, x: int) -> None:
         while (len(self.stackTopDown) > 0):
             self.stackBottomUp.append(self.stackTopDown.pop());
 
@@ -22,10 +18,7 @@ class MyQueue(object):
         self.stackBottomUp.append(x)
 
     # O(n)
-    def pop(self):
-        """
-        :rtype: int
-        """
+    def pop(self) -> int:
         while (len(self.stackBottomUp) > 0):
             self.stackTopDown.append(self.stackBottomUp.pop())
 
@@ -36,17 +29,11 @@ class MyQueue(object):
         return x
 
     # O(1)
-    def peek(self):
-        """
-        :rtype: int
-        """
+    def peek(self) -> int:
         return self.front
 
     # O(1)
-    def empty(self):
-        """
-        :rtype: bool
-        """
+    def empty(self) -> bool:
         return (len(self.stackTopDown) == 0) and (len(self.stackBottomUp) == 0)
 
 # Your MyQueue object will be instantiated and called as such:

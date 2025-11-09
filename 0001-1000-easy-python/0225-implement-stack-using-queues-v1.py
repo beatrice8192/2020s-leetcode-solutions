@@ -8,11 +8,7 @@ class MyStack(object):
         self.front = None
 
     # O(n)
-    def push(self, x):
-        """
-        :type x: int
-        :rtype: None
-        """
+    def push(self, x: int) -> None:
         if (self.front != None):
             self.queue.appendleft(self.front)
             for i in range(len(self.queue) - 1):
@@ -20,10 +16,7 @@ class MyStack(object):
         self.front = x
 
     # O(1)
-    def pop(self):
-        """
-        :rtype: int
-        """
+    def pop(self) -> int:
         x = self.front
         if len(self.queue) == 0:
             self.front = None
@@ -32,17 +25,11 @@ class MyStack(object):
         return x
 
     # O(1)
-    def top(self):
-        """
-        :rtype: int
-        """
+    def top(self) -> int:
         return self.front
 
     # O(1)
-    def empty(self):
-        """
-        :rtype: bool
-        """
+    def empty(self) -> bool:
         return (len(self.queue) == 0) and (self.front == None)
 
 # Your MyStack object will be instantiated and called as such:

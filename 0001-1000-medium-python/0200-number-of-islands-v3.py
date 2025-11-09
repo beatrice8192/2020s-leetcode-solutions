@@ -14,21 +14,7 @@ class Solution(object):
         def set_visited(r, c):
             grid[r][c] = "2"
         def get_children(node):
-            r = node[0]
-            c = node[1]
-            if visited(r, c):
-                return []
-            set_visited(r, c)
-            children = []
-            if (r-1 >= 0 and not visited(r-1, c)):
-                children.append((r-1, c))
-            if (r+1 < rows and not visited(r+1, c)):
-                children.append((r+1, c))
-            if (c-1 >= 0 and not visited(r, c-1)):
-                children.append((r, c-1))
-            if (c+1 < columns and not visited(r, c+1)):
-                children.append((r, c+1))
-            return children
+            return BFS.matrixGetChildren(node, rows, columns, visited, set_visited)
         for r in range(rows):
             for c in range(columns):
                 if visited(r, c):
@@ -60,4 +46,22 @@ class BFS:
         self.bfs_queue.extend(self.get_children(node))
         self.index += 1
         return node
+
+    @staticmethod
+    def matrixGetChildren(node, rows, columns, visited, set_visited):
+        r = node[0]
+        c = node[1]
+        if (visited(r, c)):
+            return []
+        set_visited(r, c)
+        children = []
+        if (r-1 >= 0 and not visited(r-1, c)):
+            children.append((r-1, c))
+        if (r+1 < rows and not visited(r+1, c)):
+            children.append((r+1, c))
+        if (c-1 >= 0 and not visited(r, c-1)):
+            children.append((r, c-1))
+        if (c+1 < columns and not visited(r, c+1)):
+            children.append((r, c+1))
+        return children
 
