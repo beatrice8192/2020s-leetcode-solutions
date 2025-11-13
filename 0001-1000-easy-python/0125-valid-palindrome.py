@@ -9,11 +9,11 @@ class Solution(object):
         left = 0
         right = len(s) - 1
         while (left < right):
-            while (not s[left].isalnum()):
+            while (not s[left].isalnum()): # not alpha-numeric
                 left += 1
                 if (left == len(s)):
                     return True
-            while (not s[right].isalnum()):
+            while (not s[right].isalnum()): # not alpha-numeric
                 right -= 1
                 if (right == 0):
                     return True
