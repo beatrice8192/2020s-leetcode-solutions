@@ -1,13 +1,12 @@
 # https://leetcode.com/problems/string-to-integer-atoi
 class Solution(object):
-    DIGITS = ['0','1','2','3','4','5','6','7','8','9']
-
     # def myAtoi(self, s: str) -> int:
     def myAtoi(self, s):
         """
         :type s: str
         :rtype: int
         """
+        digits = set(['0','1','2','3','4','5','6','7','8','9'])
         def truncateInteger(result, positive):
             if (positive):
                 return min(result, 2 ** 31 - 1)
@@ -17,7 +16,7 @@ class Solution(object):
         positive = True
         terminate = False
         for i in range(len(s)):
-            if (s[i] in self.DIGITS):
+            if (s[i] in digits):
                 digit = ord(s[i]) - 48
                 result = result * 10 + digit
                 terminate = True

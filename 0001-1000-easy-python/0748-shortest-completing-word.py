@@ -8,7 +8,7 @@ class Solution(object):
         :rtype: str
         """
         occurrences = {}
-        licensePlate = lower(licensePlate)
+        licensePlate = licensePlate.lower()
         words = sorted(words, key=len)
         for char in licensePlate:
             if (char.isalpha()):

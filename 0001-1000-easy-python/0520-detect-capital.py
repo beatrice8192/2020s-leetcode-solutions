@@ -6,5 +6,5 @@ class Solution(object):
         :type word: str
         :rtype: bool
         """
-        return (word == upper(word)) or (word == lower(word)) or (word[1:] == lower(word[1:]))
+        return (word == word.upper()) or (word == word.lower()) or (word[1:] == word[1:].lower())
 

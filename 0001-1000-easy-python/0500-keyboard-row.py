@@ -18,7 +18,7 @@ class Solution(object):
         }]
         def test(word):
             for row in rows:
-                if (len(word) == len([char for char in word if lower(char) in row])):
+                if (len(word) == len([char for char in word if char.lower() in row])):
                     return True
         return [word for word in words if test(word)]
 
