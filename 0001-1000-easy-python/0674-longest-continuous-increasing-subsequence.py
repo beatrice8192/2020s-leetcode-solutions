@@ -8,8 +8,8 @@ class Solution(object):
         """
         curr_len = 1
         max_len = 1
-        for i in range(len(nums) - 1):
-            if (nums[i+1] > nums[i]):
+        for i in range(1, len(nums)):
+            if (nums[i] > nums[i-1]):
                 curr_len += 1
                 max_len = max(max_len, curr_len)
             else:

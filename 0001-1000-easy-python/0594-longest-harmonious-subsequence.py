@@ -13,8 +13,8 @@ class Solution(object):
                 map[n] = 0
             map[n] += 1
         keys = sorted(map.keys())
-        for i in range(len(keys) - 1):
-            if (keys[i] + 1 == keys[i+1]):
-                result = max(result, map[keys[i]] + map[keys[i+1]])
+        for i in range(1, len(keys)):
+            if (keys[i-1] + 1 == keys[i]):
+                result = max(result, map[keys[i-1]] + map[keys[i]])
         return result
 

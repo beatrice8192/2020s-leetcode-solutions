@@ -12,8 +12,8 @@ class Solution(object):
             return False
         else:
             new_s = ""
-            for i in range(len(s) - 1):
-                new_s += str((int(s[i]) + int(s[i+1])) % 10)
+            for i in range(1, len(s)):
+                new_s += str((int(s[i-1]) + int(s[i])) % 10)
             return self.hasSameDigits(new_s)
 
     def isPalindrome(self, s):

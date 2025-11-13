@@ -8,7 +8,7 @@ class Solution(object):
         :rtype: int
         """
         result = 0
-        for i in range(len(timeSeries) - 1):
-            result += min(duration, timeSeries[i+1] - timeSeries[i])
+        for i in range(1, len(timeSeries)):
+            result += min(duration, timeSeries[i] - timeSeries[i-1])
         return result + duration
 

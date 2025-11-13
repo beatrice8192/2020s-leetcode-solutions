@@ -15,8 +15,8 @@ class Solution(object):
         """
         nodes = self.inorderTraversal(root)
         min_diff = sys.maxsize
-        for i in range(len(nodes) - 1):
-            min_diff = min(min_diff, nodes[i+1] - nodes[i])
+        for i in range(1, len(nodes)):
+            min_diff = min(min_diff, nodes[i] - nodes[i-1])
             if (min_diff == 0):
                 return 0
         return min_diff
