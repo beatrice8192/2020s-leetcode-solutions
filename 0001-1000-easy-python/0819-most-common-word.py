@@ -15,13 +15,12 @@ class Solution(object):
             while (i < len(paragraph) and not paragraph[i].isalnum()): # not alpha-numeric
                 i += 1
             j = i
-            while (j < len(paragraph) and paragraph[j].isalnum()): # is alpha-numeric
-                j += 1
-            word = paragraph[i:j]
+            while (i < len(paragraph) and paragraph[i].isalnum()): # is alpha-numeric
+                i += 1
+            word = paragraph[j:i]
             if (word not in occurrences):
                 occurrences[word] = 0
             occurrences[word] += 1
-            i = j
         frequencies = list(reversed(sorted([(occurrences[word], word) for word in occurrences])))
         for f in frequencies:
             if (f[1] not in banned):
