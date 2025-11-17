@@ -1,6 +1,6 @@
 # https://leetcode.com/problems/implement-queue-using-stacks
-from collections import deque
 
+from collections import deque
 class MyQueue(object):
 
     def __init__(self):
