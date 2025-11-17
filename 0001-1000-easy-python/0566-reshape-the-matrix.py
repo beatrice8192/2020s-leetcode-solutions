@@ -10,6 +10,6 @@ class Solution(object):
         """
         if (len(mat) * len(mat[0]) != r * c):
             return mat
-        flattened = [cell for row in mat for cell in row]
-        return [flattened[i:(i+c)] for i in range(0, len(flattened), c)]
+        entries = [entry for row in mat for entry in row]
+        return [entries[i:(i+c)] for i in range(0, len(entries), c)]
 
