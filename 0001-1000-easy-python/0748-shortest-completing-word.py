@@ -20,5 +20,5 @@ class Solution(object):
         for word in words:
             if (len([char for char in occurrences if invalid(word, char)]) == 0):
                 return word
-        return ""
+        return None
 

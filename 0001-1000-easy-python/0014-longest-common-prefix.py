@@ -18,5 +18,5 @@ class Solution(object):
                 elif (strs[i][index] != strs[0][index]):
                     return strs[0][0:index]
             index += 1
-        return ""
+        return None
 

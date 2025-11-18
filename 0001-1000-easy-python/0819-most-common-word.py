@@ -25,5 +25,5 @@ class Solution(object):
         for f in frequencies:
             if (f[1] not in banned):
                 return f[1]
-        return ""
+        return None
 
